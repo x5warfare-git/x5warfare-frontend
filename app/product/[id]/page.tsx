@@ -7,7 +7,7 @@ export async function generateMetadata({ params }: { params: Promise<{ id: strin
   const id = resolvedParams.id;
 
   try {
-    const res = await fetch(`http://127.0.0.1:5000/api/products/${id}`);
+    const res = await fetch(`https://x5warfare-backend-production.up.railway.app/api/products/${id}`);
     const result = await res.json();
 
     if (result.success) {
@@ -27,7 +27,7 @@ export default async function ProductDetail({ params }: { params: Promise<{ id: 
   const resolvedParams = await params;
   const id = resolvedParams.id;
 
-  const res = await fetch(`http://127.0.0.1:5000/api/products/${id}`, { cache: 'no-store' });
+  const res = await fetch(`https://x5warfare-backend-production.up.railway.app/api/products/${id}`, { cache: 'no-store' });
   const result = await res.json();
 
   if (!result.success) {
