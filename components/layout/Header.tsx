@@ -126,7 +126,7 @@ export default function Header() {
               onKeyDown={executeSearch}
               placeholder="SEARCH ARCHIVE" 
               className="w-full bg-transparent text-3xl md:text-5xl lg:text-6xl font-black uppercase tracking-widest text-white border-b border-warfare-red/20 focus:border-warfare-red focus:outline-none pl-12 md:pl-20 pb-4 placeholder:text-white/10 transition-colors duration-500 rounded-none"
-              ref={input => input && isSearchOpen && input.focus()}
+              ref={(input) => { if (input && isSearchOpen) input.focus(); }}
             />
           </div>
           <div className="flex justify-between items-center mt-2 border-t border-warfare-red/10 pt-4">
