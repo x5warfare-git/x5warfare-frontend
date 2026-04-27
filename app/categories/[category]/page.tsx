@@ -23,7 +23,7 @@ export default async function CategoryDetailPage({ params }: { params: Promise<{
   const { category } = resolvedParams;
 
   // Sadece ilgili kategoriyi çekiyoruz
-  const res = await fetch(`http://127.0.0.1:5000/api/products?category=${category}`, { cache: 'no-store' });
+  const res = await fetch(`https://x5warfare-backend-production.up.railway.app/api/products?category=${category}`, { cache: 'no-store' });
   const result = await res.json();
   const products = result.data;
 
